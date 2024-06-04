@@ -6,8 +6,8 @@ numero_secreto = 42
 total_de_tentativas = 3
 rodada = 1
 
-while(rodada <=2 total_de_tentativas):
-    print("Tentativa", rodada,"de", total_de_tentativas)
+while(rodada <= total_de_tentativas):
+    print("Tentativa {} de {}".format(rodada, total_de_tentativas)) #substituir valores na string, onde tem {} entra o valor das variáveis, isso se chama "String interpolation"
     chute = input("Digite o seu numero: ")
     print("Voce digitou o numero ", chute)
     chute = int(chute)
