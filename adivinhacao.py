@@ -8,9 +8,13 @@ total_de_tentativas = 3
 
 for rodada in range(1, total_de_tentativas + 1): #range é para definir o intervalo que o loop for vai rodar através da variavel rodada, por isso não é necessário definir um valor para ela antes, pois ela assumirá o primeiro valor do range. É necessario colocar o +1 apos a variavel pois ele o ultimo valor é exclusivo, ou seja, a variavel rodada nao assumirá o último valor.
     print("Tentativa {} de {}".format(rodada, total_de_tentativas)) #substituir valores na string, onde tem {} entra o valor das variáveis, isso se chama "String interpolation"
-    chute = input("Digite o seu numero: ")
+    chute = input("Digite um numero entre 1 e 100: ")
     print("Voce digitou o numero ", chute)
     chute = int(chute)
+
+    if(chute < 1 or chute > 100):
+        print("Voce deve digitar um numero entre 1 e 100!")
+        continue
 
     acertou = chute == numero_secreto
     maior = chute > numero_secreto
@@ -18,6 +22,7 @@ for rodada in range(1, total_de_tentativas + 1): #range é para definir o interv
 
     if(acertou):
         print("Voce acertou!")
+        break
     else:
         if(maior):
             print("Voce errou! O seu chute foi maior do que o numero secreto")
