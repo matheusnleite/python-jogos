@@ -1,12 +1,16 @@
+import random #importando a biblioteca random
+
 print("*********************************")
 print("Bem vindo ao jogo de Adivinhação!")
 print("*********************************")
 
-numero_secreto = 42
+numero_secreto = random.randrange(1,101) #gerando um numero aleatorio entre 1 e 100
 total_de_tentativas = 3
 
+print(numero_secreto)
 
-for rodada in range(1, total_de_tentativas + 1): #range é para definir o intervalo que o loop for vai rodar através da variavel rodada, por isso não é necessário definir um valor para ela antes, pois ela assumirá o primeiro valor do range. É necessario colocar o +1 apos a variavel pois ele o ultimo valor é exclusivo, ou seja, a variavel rodada nao assumirá o último valor.
+
+for rodada in range(1, total_de_tentativas + 1): #range é para definir o intervalo que o loop for vai rodar através da variavel rodada, por isso não é necessário definir um valor para ela antes, pois ela assumirá o primeiro valor do range. É necessario colocar o +1 apos a variavel pois o ultimo valor é exclusivo, ou seja, a variavel rodada nao assumirá o último valor.
     print("Tentativa {} de {}".format(rodada, total_de_tentativas)) #substituir valores na string, onde tem {} entra o valor das variáveis, isso se chama "String interpolation"
     chute = input("Digite um numero entre 1 e 100: ")
     print("Voce digitou o numero ", chute)
