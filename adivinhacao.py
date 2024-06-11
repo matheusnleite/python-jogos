@@ -5,9 +5,19 @@ print("Bem vindo ao jogo de Adivinhação!")
 print("*********************************")
 
 numero_secreto = random.randrange(1,101) #gerando um numero aleatorio entre 1 e 100
-total_de_tentativas = 3
+total_de_tentativas = 0
 
-print(numero_secreto)
+print("Qual o nível de dificuldade?")
+print("(1) Fácil (2) Médio (3) Difícil")
+
+nivel = int(input("Defina o nivel: "))
+
+if(nivel == 1):
+    total_de_tentativas = 20
+elif(nivel == 2):
+    total_de_tentativas = 10
+else:
+    total_de_tentativas = 5
 
 
 for rodada in range(1, total_de_tentativas + 1): #range é para definir o intervalo que o loop for vai rodar através da variavel rodada, por isso não é necessário definir um valor para ela antes, pois ela assumirá o primeiro valor do range. É necessario colocar o +1 apos a variavel pois o ultimo valor é exclusivo, ou seja, a variavel rodada nao assumirá o último valor.
