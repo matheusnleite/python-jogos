@@ -2,8 +2,21 @@ def jogar(): #definindo a funcao para chama-la no outro codigo
     print("*********************************")
     print("***Bem vindo ao jogo de Forca!***")
     print("*********************************")
+    palavra_secreta = "banana"
+    enforcou = False
+    acertou = False
 
+    while(not enforcou and not acertou):  #not é para negar a variavel
+        chute = input("Qual letra? ")
+        chute = chute.strip()
 
+        index=0
+        for letra in palavra_secreta:
+            if(chute.upper() == letra.upper()):
+                print("Encontrei a letra {} na posição {}".format(chute, index))
+            index = index+1
+        print("jogando...")
+    
 
     print("Fim do jogo")
     
